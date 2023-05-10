@@ -8,7 +8,7 @@ dotenv.config({ path: PATH });
 
 export const PORT = process.env.PORT || 3000;
 export const MONGODB_URI =
-  process.env.MONGODB_URL || "mongodb://localhost:27017";
+  process.env.MONGODB_URI || "mongodb://localhost:27017";
 export const MONGODB_NAME = process.env.MONGODB_NAME || "test";
 export const SESSION_KEY1 = process.env.SESSION_KEY1 || "key1";
 export const SESSION_KEY2 = process.env.SESSION_KEY2 || "key2";

@@ -1,13 +1,12 @@
-import mongoose from "mongoose";
 import { ENVIRONMENT, MONGODB_NAME, MONGODB_URI, PORT } from "./env";
+import mongoose from "mongoose";
 import { app } from "./app";
 
 async function bootstrap() {
   /** connect to mongodb and more here */
+  console.log(MONGODB_URI, MONGODB_NAME);
   try {
-    await mongoose.connect(`${MONGODB_URI}/${MONGODB_NAME}`, {
-      connectTimeoutMS: 1000
-    });
+    await mongoose.connect(`${MONGODB_URI}/${MONGODB_NAME}`);
     console.log(`[Mongoose]: Connected to ${MONGODB_NAME} database!`);
   } catch (error) {
     console.log(error);
